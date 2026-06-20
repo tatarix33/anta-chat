@@ -39,3 +39,15 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Supabase CLI local cache
+supabase/.temp/
+
+# Scratch / yerel deneme dosyaları
+scratch/
+test_*.txt
+
+# Gizli / yerel yapılandırma
+/google-services.json
+.env
+.env.*

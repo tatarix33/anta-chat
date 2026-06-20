@@ -1,24 +1,51 @@
 {
   "expo": {
-    "name": "anta-chat",
+    "name": "Anta Chat",
     "slug": "anta-chat",
     "version": "1.0.0",
+    "newArchEnabled": true,
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tarik.antachat",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Uygulamaya güvenli giriş yapabilmek için Face ID kullanılması gerekmektedir."
+      }
     },
     "android": {
+      "package": "com.tarik.antachat",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#0B0F19",
+        "foregroundImage": "./assets/android-icon-foreground.png"
       }
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0F19"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-monochrome.png",
+          "color": "#00FF87",
+          "defaultChannel": "default"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5084cafa-ad9a-4df1-bd2a-6ce601b04f11"
+      }
+    },
+    "owner": "tarijj"
   }
 }

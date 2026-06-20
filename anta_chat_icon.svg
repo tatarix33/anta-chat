@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Definitions for gradients, filters, and shadows -->
+  <defs>
+    <!-- Import Premium Google Font -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;900&amp;display=swap');
+      .anta-brand {
+        font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+      }
+      .chat-sub {
+        font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+      }
+    </style>
+
+    <!-- Dark Gray Background Gradient (Premium Charcoal) -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F2937" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    
+    <!-- Privacy Green Gradient for ANTA (Ultra-Neon Brightness) -->
+    <linearGradient id="antaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FF99" />
+      <stop offset="100%" stop-color="#00FF44" />
+    </linearGradient>
+    
+    <!-- Outer Border Gradient for depth -->
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#374151" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Drop Shadow for the Icon Container -->
+    <filter id="appIconShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.5" />
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle (iOS App Icon Shape) -->
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="url(#bgGradient)" stroke="url(#borderGradient)" stroke-width="3" filter="url(#appIconShadow)" />
+
+  <!-- Content Group (Centered) -->
+  <g transform="translate(256, 256)">
+    <!-- ANTA Brand Name -->
+    <text 
+      x="0" 
+      y="-15" 
+      class="anta-brand"
+      font-size="105" 
+      font-weight="900" 
+      letter-spacing="5" 
+      fill="url(#antaGradient)" 
+      text-anchor="middle" 
+      dominant-baseline="middle"
+      filter="drop-shadow(0px 4px 16px rgba(0, 255, 135, 0.35))"
+    >ANTA</text>
+    
+    <!-- Small "chat" Text -->
+    <text 
+      x="0" 
+      y="60" 
+      class="chat-sub"
+      font-size="34" 
+      font-weight="500" 
+      letter-spacing="8" 
+      fill="#D1FAE5" 
+      text-anchor="middle"
+      dominant-baseline="middle"
+      opacity="0.9"
+    >chat</text>
+  </g>
+
+  <!-- Premium Security Indicator Badge (Top Right) -->
+  <g transform="translate(390, 122)">
+    <!-- Pulsing Outer Ring -->
+    <circle cx="0" cy="0" r="12" fill="#00FF87" opacity="0.35" />
+    <!-- Core Indicator Dot -->
+    <circle cx="0" cy="0" r="6" fill="#00FF87" filter="drop-shadow(0px 0px 6px #00FF87)" />
+  </g>
+</svg>
